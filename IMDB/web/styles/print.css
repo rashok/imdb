@@ -1,0 +1,143 @@
+* {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter:none !important;
+    -ms-filter: none !important;
+}
+
+body {
+    margin: 100px!Important;
+}
+
+a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+}
+
+pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tr, img {
+    page-break-inside: avoid;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h2, h3{
+    page-break-after: avoid;
+}
+
+/* Hide unnecessary elements */
+#jsnotice,
+#page-header,
+#bottom-widgets,
+#title-search,
+#breadcrumbs,
+.sidebar,
+.footer-navigation,
+#pager,
+.social, .social-dark,
+form,
+.post-relative,
+.comment-form,
+.comment-side,
+.slider-wrapper,
+.navigation-wrapper,
+.tabs-controller {
+    display: none;
+}
+
+/* Show hided elements */
+.tabs-content,
+.toggle-content,
+.accordion-content {
+    display: block!Important;
+}
+
+#page-footer {
+    margin: 40px auto;
+}
+
+/* Inner grid system
+----------------------------------------------------------------------------- */
+.layout-1-2, .layout-1-3, .layout-1-4, .layout-1-5, .layout-1-6, .layout-2-6,
+.layout-4-6, .layout-5-6 {
+    float: left;
+    margin: 0 5% 20px 0;
+    padding: 0;
+}
+
+/* Column widths */
+.layout-1-1 {width: 100%;}
+.layout-1-2 {width: 47.5%;}
+.ie7 .layout-1-2 {width: 47%;}
+.layout-1-3, .layout-2-6 {width: 30%}
+.layout-1-4 {width: 21.25%;}
+.ie7 .layout-1-4 {width: 21%;}
+.layout-1-5 {width: 16%;}
+.layout-1-6 {width: 12.5%;}
+.ie7 .layout-1-6 {width: 12%;}
+.layout-4-6 {width: 65%;}
+.layout-5-6 {width: 82.5%;}
+.ie7 .layout-5-6 {width: 82%;}
+
+/* Clear right margin to last grid elements */
+.layout-last, .layout-1-1 {margin-right: 0!Important;}
+
+/* Align elements
+----------------------------------------------------------------------------- */
+.align-left{
+    clear: left;
+    float: left;
+    margin: 0 20px 20px 0;
+    overflow: hidden;
+}
+
+.align-right{
+    clear: right;
+    float: right;
+    margin: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.align-center {
+    display: block;
+    margin: 20px auto;
+    float: none;
+    clear: both;
+    text-align: center;
+}
+
+    .align-center * {
+        margin: 0 auto;
+        text-align: center;
+    }
+
