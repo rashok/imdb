@@ -1,0 +1,26 @@
+-- criar tres visoes para perfis de usuario
+-- cada usuario tera permissoes e visoes diferentes
+
+-- tres perfis: 
+-- Administrador : terá acesso a tudo
+CREATE VIEW administrador AS 
+	SELECT ... -- preciso da tabela actor_movies
+
+
+-- Visitante: poderá somente realizar CONSULTAS e só aparecerá o titulo e autores
+CREATE VIEW visitante AS 
+	SELECT ...
+
+-- usuário: poderá realizar CONSULTAS e aparecerá todos os dados dos filmes	
+CREATE VIEW usuario AS 
+	SELECT ...
+
+	
+-- ESPECIFICAÇÃO DO TRABALHO
+--Banco de operações de inserção, alteração, remoção e consultas:
+
+--As operações serão divididas em dois grupos: comuns a todos os grupos e diferenciadas por grupo.
+--Bloco Comum: todos os grupos terão em comum as seguintes operações básicas:
+-- Cadastro, alteração, remoção e consultas de artistas.
+-- Cadastro, alteração, remoção e consultas de filmes.
+-- Cadastro, alteração, remoção e consultas de diretores.

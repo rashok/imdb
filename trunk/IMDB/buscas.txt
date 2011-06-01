@@ -1,0 +1,44 @@
+--inclusão de recursos para automatização de tarefas no banco (triggers e stored procedures).
+
+-- 1. Busca avançada de filmes, que inclui o idioma e a especificação 
+-- de um ou mais atores (exato ou expressão regular).
+
+
+-- 2. Quais atores trabalharam com apenas gêneros X e/ou Y? Construir um ranking.
+-- 3. Uma consulta definida pelo grupo envolvendo: 
+	--(1) duas ou mais tabelas com condições de seleção e 
+	--(2) funções de agregação com agrupamento e/ou aninhamento de consultas (subconsultas).
+
+
+-- busca que inclui o idioma	
+Select top 100 title,m.id from movie as m, genre as g, genre_movie as h
+	where g.genre = 'Comedy' and G.id = h.idGenre and h.idMovie = m.id
+	--obs : g.genre = 'Comedy' vai ser g.genre = 'opcao escolhida pelo usuario'
+	
+	
+-- teste para busca que inclui o idioma (OK!!)	
+select genre from genre as g, movie as m, genre_movie as h 
+	where m.id = 197 and m.id = h.idMovie and h.idGenre = g.id
+
+
+-- testando procedure
+
+
+
+CREATE PROCEDURE buscaGenerocomAtores(@genero varchar(100),@quantidadeDeAtores int) AS
+	SET NOCOUNT ON
+	
+	DECLARE @quantidade int;	
+	
+	--SELECT @quantidade = 
+	--SELECT COUNT(idActor) FROM movie_actor;
+	
+	
+	-- BUSCA COM GENEROS OK
+	SELECT TOP 100 m.title,m.id from movie as m, genre as g, genre_movie as h,movie_actor as i
+	WHERE 
+		g.genre = 'COMEDY' AND
+		g.id = h.idGenre AND
+		h.idMovie = M.id AND;
+		--m.id = i.idMovie AND	
+		

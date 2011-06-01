@@ -1,0 +1,687 @@
+/* FONTS SETTINTGS -------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+/* YANONE KAFFEESATZ ELEMENTS --------------------------------------------------
+----------------------------------------------------------------------------- */
+.font-1 /* -------------------------------------------- Font one declaration */
+{
+    font-family: 'Yanone Kaffeesatz', arial, serif!Important;
+}
+
+
+/* LOBSTER ELEMENTS ------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.font-2, /* -------------------------------------------- Font two declaration */
+#site-name, /* ------------------------------------------- Header - site name */
+#site-slogan, /* ----------------------------------------- Page header slogan */
+#title-text, /* -------------------------------------- Page title and summary */
+.widget-heading, /* ---------------------------------------- Widgets headings */
+.ppt, /* ------------------------------------------------- Pretty photo title */
+/* Regular headers styles --------------------------------------------------- */
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6
+{
+    font-family: 'Lobster', arial, serif!Important;
+    font-style: normal;
+}
+
+
+/* GEORGIA ITALIC ELEMENTS -----------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.font-3, /* ------------------------------------------ Font three declaration */
+#breadcrumbs, /* ------------------------------------------- Breadcrumbs text */
+#page-footer, /* ------------------------------------------------ Page footer */
+.box-head, /* ------------------------------------------- Content box heading */
+table th, /* ---------------------------------------------- Table header cell */
+blockquote, /* --------------------------------------------------- Blockquote */
+label.error, /* ----------------------------- Error message on form validation */
+.tabs-controller, /* --------------------------------------- Tabs controllers */
+.toggle-trigger, /* ------------------------------------- Toggles controllers */
+.accordion-trigger, /* ------------------------------- Accordions controllers */
+.img-holder .caption, /* -------------------------------------- Image caption */
+.pp_description, /* ------------------------- Pretty photo - description text */
+.nivo-caption, /* ---------------------------------------------- Nivo caption */
+.postlist-header p, /* ------------------- Posts list - post meta information */
+.post-content-header p, /* --------------- Posts page - post meta information */
+.post-content-tags, /* ------------------------------- Posts page - post tags */
+.post-author-url, /* ----------------------- Posts page - post author website */
+.comment-created, /* --------------------------- Posts page - comment created */
+li.pager-first a, /* ------------------------------------- Pager link - First */
+li.pager-last a, /* --------------------------------------- Pager link - Last */
+.widget-calendar caption, /* ------------------------ Widget calendar caption */
+.widget-recent-posts time, /* --------------- Widget - Resent posts - created */
+.tweet-time, /* ---------------- Widget - Recent tweets, Last tweet - created */
+.widget-last-tweet .widget-content, /* ------------------ Widget - Last tweet */
+/* Buttons ------------------------------------------------------------------ */
+.btn,
+.btn-s,
+.btn-l,
+.btn-xl,
+/* Form elements ------------------------------------------------------------ */
+input,
+legend,
+label,
+input.submit,
+input[type=submit],
+input[type=reset],
+input[type=button],
+textarea
+{
+    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif!Important;
+    font-style: italic;
+    font-size: 90%;
+}
+
+
+/* Custom textures -------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.texture-1 #page-header {
+    background-image: url(../images/backgrounds/1.png)!Important;
+}
+
+.texture-2 #page-header {
+    background-image: url(../images/backgrounds/2.png)!Important;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.texture-3 #page-header {
+    background-image: url(../images/backgrounds/3.png)!Important;
+}
+
+.texture-4 #page-header {
+    background-image: url(../images/backgrounds/4.png)!Important;
+}
+
+.texture-5 #page-header {
+    background-image: url(../images/backgrounds/5.png)!Important;
+}
+
+
+/* COLORS SETTINGS -------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* MAIN COLOR 1 - COLOR OF HEADER AND PRE FOOTER AREA --------------------------
+----------------------------------------------------------------------------- */
+#page-header, /* ------------------------------------------ Header background */
+#bottom-widgets /* ----------------------- Pre footer widgets area background */
+{
+    background-color: #222;
+}
+
+
+/* MAIN COLOR 2 - COLOR OF PAGE ELEMENTS RIBBONS ETC. --------------------------
+----------------------------------------------------------------------------- */
+#page-header .navigation-wrapper, /* ----------------- Top navigation wrapper */
+#page-header .page-frontpage .navigation-wrapper, /* Frontpage - Top navigation wrapper */
+#header-navigation li, /* -------------------- Navigation list item with star */
+#page-title, /* -------------------------------------------------- Page title */
+#breadcrumbs, /* ------------------------------------------------ Breadcrumbs */
+.ribbon-header, /* --------------------- Styled header with ribbon background */
+.box-head, /* -------------------------------------------- Content box header */
+.page-content .header-404 h3.ribbon-404, /* --------------- Page 404 - header */
+.toggle-trigger, /* ------------------------------------------ Toggle trigger */
+.accordion-trigger, /* ------------------------------------ Accordion trigger */
+#pager li:hover a, /* ------------------------------------------- Pager links */
+.pager-current span, /* ----------------------------- Pager current page span */
+table th, /* --------------------------------------------------- Table header */
+table tfoot, /* ------------------------------------------------ Table footer */
+/* Lists -------------------------------------------------------------------- */
+.circle-list li,
+.featured-list li,
+.arrow-list li,
+.check-list li,
+.ban-list li,
+.info-list li,
+/* Buttons ------------------------------------------------------------------ */
+.btn,
+.btn-s,
+.btn-l,
+.btn-xl,
+/* Form buttons ------------------------------------------------------------- */
+input[type=submit],
+input[type=reset],
+input[type=button],
+input.submit,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input.submit:hover,
+button:hover
+{
+    background-color: #cc2c08;
+}
+
+
+/* PAGE TEXT ELEMENTS COLOR ----------------------------------------------------
+----------------------------------------------------------------------------- */
+.comment-header .comment-created, /* ------------------- Comment created text */
+.widget-contacts-info span, /* -------------------------- Widget contact info */
+.widget-recent-posts time, /* --------------- Widget - Recent posts - created */
+.tweet-time, /* ---------------- Widget - Recent tweets, Last tweet - created */
+.widget-content li:hover a, /* ------------------ Widgets list links on hover */
+a, /* ---------------------------------------------------------- Regular link */
+a:visited, /* ------------------------------------------------ Visited link */
+/* Headers ------------------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    color: #AB391F;
+}
+
+/* Regular links - already defined ------------------------------------------ */
+a, /* ---------------------------------------------------------- Regular link */
+a:visited /* --------------------------------------------------- Visited link */
+{}
+
+/* Hover state links - must be defined -------------------------------------- */
+a:hover, /* ------------------------------------------------ Hover state link */
+a:active, /* ---------------------------------------------------- Active link */
+#header-navigation a:hover /* ----------------------- Header navigation links */
+{
+    color: #652112;
+}
+
+
+/* SPECIFIC ELEMENTS STYLES ----------------------------------------------------
+----------------------------------------------------------------------------- */
+#page-header h1 a /* ---------------------------------- Site name - header H1 */
+{
+    color: #fff;
+}
+
+#page-header h2 /* ---------------------------------- Site slogan - header H2 */
+{
+    color: #fff;
+}
+
+
+
+/* SKINS -----------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* Skin 1
+----------------------------------------------------------------------------- */
+.skin-1 #page-header
+{
+    background: url(../images/backgrounds/skin-1.jpg) center top;
+}
+
+.skin-1 #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-1.jpg) center top;
+    background: url(../images/bottom_widgets.png) top repeat-x,
+                url(../images/bottom_widgets.png) bottom repeat-x,
+                url(../images/backgrounds/skin-1.jpg) center top;
+}
+
+.skin-1 #page-header .navigation-wrapper,
+.skin-1 #page-header .page-frontpage .navigation-wrapper,
+.skin-1 #header-navigation li,
+.skin-1 #page-title,
+.skin-1 #breadcrumbs,
+.skin-1 .ribbon-header,
+.skin-1 .box-head, 
+.skin-1 .page-content .header-404 h3.ribbon-404,
+.skin-1 .toggle-trigger,
+.skin-1 .accordion-trigger,
+.skin-1 #pager li:hover a,
+.skin-1 .pager-current span,
+.skin-1 table th,
+.skin-1 table tfoot,
+.skin-1 .circle-list li,
+.skin-1 .featured-list li,
+.skin-1 .arrow-list li,
+.skin-1 .check-list li,
+.skin-1 .ban-list li,
+.skin-1 .info-list li,
+.skin-1 .btn,
+.skin-1 .btn-s,
+.skin-1 .btn-l,
+.skin-1 .btn-xl,
+.skin-1 input[type=submit],
+.skin-1 input[type=reset],
+.skin-1 input[type=button],
+.skin-1 input.submit,
+.skin-1 input[type=submit]:hover,
+.skin-1 input[type=reset]:hover,
+.skin-1 input.submit:hover,
+.skin-1 button:hover
+{
+    background-color: #984676;
+}
+
+.skin-1 .comment-header .comment-created,
+.skin-1 .widget-contacts-info span,
+.skin-1 .widget-recent-posts time,
+.skin-1 .tweet-time,
+.skin-1 .widget-content li:hover a,
+.skin-1 a,
+.skin-1 a:visited,
+.skin-1 h1,
+.skin-1 h2,
+.skin-1 h3,
+.skin-1 h4,
+.skin-1 h5,
+.skin-1 h6
+{
+    color: #984676;
+}
+
+.skin-1 a,
+.skin-1 a:visited
+{}
+
+.skin-1 a:hover,
+.skin-1 a:active,
+.skin-1 #header-navigation a:hover
+{
+    color: #D9016C;
+}
+
+
+/* Skin 2
+----------------------------------------------------------------------------- */
+.skin-2 #page-header
+{
+    background: url(../images/backgrounds/skin-2.jpg) center top;
+}
+
+.skin-2 #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-2.jpg) center top;
+    background: url(../images/bottom_widgets.png) top repeat-x,
+                url(../images/bottom_widgets.png) bottom repeat-x,
+                url(../images/backgrounds/skin-2.jpg) center top;
+}
+
+.skin-2 #page-header .navigation-wrapper,
+.skin-2 #page-header .page-frontpage .navigation-wrapper,
+.skin-2 #header-navigation li,
+.skin-2 #page-title,
+.skin-2 #breadcrumbs,
+.skin-2 .ribbon-header,
+.skin-2 .box-head, 
+.skin-2 .page-content .header-404 h3.ribbon-404,
+.skin-2 .toggle-trigger,
+.skin-2 .accordion-trigger,
+.skin-2 #pager li:hover a,
+.skin-2 .pager-current span,
+.skin-2 table th,
+.skin-2 table tfoot,
+.skin-2 .circle-list li,
+.skin-2 .featured-list li,
+.skin-2 .arrow-list li,
+.skin-2 .check-list li,
+.skin-2 .ban-list li,
+.skin-2 .info-list li,
+.skin-2 .btn,
+.skin-2 .btn-s,
+.skin-2 .btn-l,
+.skin-2 .btn-xl,
+.skin-2 input[type=submit],
+.skin-2 input[type=reset],
+.skin-2 input[type=button],
+.skin-2 input.submit,
+.skin-2 input[type=submit]:hover,
+.skin-2 input[type=reset]:hover,
+.skin-2 input.submit:hover,
+.skin-2 button:hover
+{
+    background-color: #F05230;
+}
+
+.skin-2 .comment-header .comment-created,
+.skin-2 .widget-contacts-info span,
+.skin-2 .widget-recent-posts time,
+.skin-2 .tweet-time,
+.skin-2 .widget-content li:hover a,
+.skin-2 a,
+.skin-2 a:visited,
+.skin-2 h1,
+.skin-2 h2,
+.skin-2 h3,
+.skin-2 h4,
+.skin-2 h5,
+.skin-2 h6
+{
+    color: #A6172C;
+}
+
+.skin-2 a,
+.skin-2 a:visited
+{}
+
+.skin-2 a:hover,
+.skin-2 a:active,
+.skin-2 #header-navigation a:hover
+{
+    color: #791121;
+}
+
+
+/* Skin 3
+----------------------------------------------------------------------------- */
+.skin-3 #page-header
+{
+    background: url(../images/backgrounds/skin-3.jpg) center top;
+}
+
+.skin-3 #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-3.jpg) center top;
+    background: url(../images/bottom_widgets.png) top repeat-x,
+                url(../images/bottom_widgets.png) bottom repeat-x,
+                url(../images/backgrounds/skin-3.jpg) center top;
+}
+
+
+.skin-3 #page-header .navigation-wrapper,
+.skin-3 #page-header .page-frontpage .navigation-wrapper,
+.skin-3 #header-navigation li,
+.skin-3 #page-title,
+.skin-3 #breadcrumbs,
+.skin-3 .ribbon-header,
+.skin-3 .box-head, 
+.skin-3 .page-content .header-404 h3.ribbon-404,
+.skin-3 .toggle-trigger,
+.skin-3 .accordion-trigger,
+.skin-3 #pager li:hover a,
+.skin-3 .pager-current span,
+.skin-3 table th,
+.skin-3 table tfoot,
+.skin-3 .circle-list li,
+.skin-3 .featured-list li,
+.skin-3 .arrow-list li,
+.skin-3 .check-list li,
+.skin-3 .ban-list li,
+.skin-3 .info-list li,
+.skin-3 .btn,
+.skin-3 .btn-s,
+.skin-3 .btn-l,
+.skin-3 .btn-xl,
+.skin-3 input[type=submit],
+.skin-3 input[type=reset],
+.skin-3 input[type=button],
+.skin-3 input.submit,
+.skin-3 input[type=submit]:hover,
+.skin-3 input[type=reset]:hover,
+.skin-3 input.submit:hover,
+.skin-3 button:hover
+{
+    background-color: #96C34B;
+}
+
+.skin-3 .comment-header .comment-created,
+.skin-3 .widget-contacts-info span,
+.skin-3 .widget-recent-posts time,
+.skin-3 .tweet-time,
+.skin-3 .widget-content li:hover a,
+.skin-3 a,
+.skin-3 a:visited,
+.skin-3 h1,
+.skin-3 h2,
+.skin-3 h3,
+.skin-3 h4,
+.skin-3 h5,
+.skin-3 h6
+{
+    color: #70A548;
+}
+
+.skin-3 a,
+.skin-3 a:visited
+{}
+
+.skin-3 a:hover,
+.skin-3 a:active,
+.skin-3 #header-navigation a:hover
+{
+    color: #478B42;
+}
+
+
+/* Skin 4
+----------------------------------------------------------------------------- */
+.skin-4 #page-header
+{
+    background: url(../images/backgrounds/skin-4.jpg) center top;
+}
+
+.skin-4 #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-4.jpg) center top;
+    background: url(../images/bottom_widgets.png) top repeat-x,
+                url(../images/bottom_widgets.png) bottom repeat-x,
+                url(../images/backgrounds/skin-4.jpg) center top;
+}
+
+
+.skin-4 #page-header .navigation-wrapper,
+.skin-4 #page-header .page-frontpage .navigation-wrapper,
+.skin-4 #header-navigation li,
+.skin-4 #page-title,
+.skin-4 #breadcrumbs,
+.skin-4 .ribbon-header,
+.skin-4 .box-head, 
+.skin-4 .page-content .header-404 h3.ribbon-404,
+.skin-4 .toggle-trigger,
+.skin-4 .accordion-trigger,
+.skin-4 #pager li:hover a,
+.skin-4 .pager-current span,
+.skin-4 table th,
+.skin-4 table tfoot,
+.skin-4 .circle-list li,
+.skin-4 .featured-list li,
+.skin-4 .arrow-list li,
+.skin-4 .check-list li,
+.skin-4 .ban-list li,
+.skin-4 .info-list li,
+.skin-4 .btn,
+.skin-4 .btn-s,
+.skin-4 .btn-l,
+.skin-4 .btn-xl,
+.skin-4 input[type=submit],
+.skin-4 input[type=reset],
+.skin-4 input[type=button],
+.skin-4 input.submit,
+.skin-4 input[type=submit]:hover,
+.skin-4 input[type=reset]:hover,
+.skin-4 input.submit:hover,
+.skin-4 button:hover
+{
+    background-color: #E9B82F;
+}
+
+.skin-4 .comment-header .comment-created,
+.skin-4 .widget-contacts-info span,
+.skin-4 .widget-recent-posts time,
+.skin-4 .tweet-time,
+.skin-4 .widget-content li:hover a,
+.skin-4 a,
+.skin-4 a:visited,
+.skin-4 h1,
+.skin-4 h2,
+.skin-4 h3,
+.skin-4 h4,
+.skin-4 h5,
+.skin-4 h6
+{
+    color: #B98324;
+}
+
+.skin-4 a,
+.skin-4 a:visited
+{}
+
+.skin-4 a:hover,
+.skin-4 a:active,
+.skin-4 #header-navigation a:hover
+{
+    color: #84501E;
+}
+
+
+/* Skin 5
+----------------------------------------------------------------------------- */
+.skin-5 #page-header
+{
+    background: url(../images/backgrounds/skin-5.jpg) center top;
+}
+
+.skin-5 #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-5.jpg) center top;
+    background: url(../images/bottom_widgets.png) top repeat-x,
+                url(../images/bottom_widgets.png) bottom repeat-x,
+                url(../images/backgrounds/skin-5.jpg) center top;
+}
+
+
+.skin-5 #page-header .navigation-wrapper,
+.skin-5 #page-header .page-frontpage .navigation-wrapper,
+.skin-5 #header-navigation li,
+.skin-5 #page-title,
+.skin-5 #breadcrumbs,
+.skin-5 .ribbon-header,
+.skin-5 .box-head, 
+.skin-5 .page-content .header-404 h3.ribbon-404,
+.skin-5 .toggle-trigger,
+.skin-5 .accordion-trigger,
+.skin-5 #pager li:hover a,
+.skin-5 .pager-current span,
+.skin-5 table th,
+.skin-5 table tfoot,
+.skin-5 .circle-list li,
+.skin-5 .featured-list li,
+.skin-5 .arrow-list li,
+.skin-5 .check-list li,
+.skin-5 .ban-list li,
+.skin-5 .info-list li,
+.skin-5 .btn,
+.skin-5 .btn-s,
+.skin-5 .btn-l,
+.skin-5 .btn-xl,
+.skin-5 input[type=submit],
+.skin-5 input[type=reset],
+.skin-5 input[type=button],
+.skin-5 input.submit,
+.skin-5 input[type=submit]:hover,
+.skin-5 input[type=reset]:hover,
+.skin-5 input.submit:hover,
+.skin-5 button:hover
+{
+    background-color: #737D26;
+}
+
+.skin-5 .comment-header .comment-created,
+.skin-5 .widget-contacts-info span,
+.skin-5 .widget-recent-posts time,
+.skin-5 .tweet-time,
+.skin-5 .widget-content li:hover a,
+.skin-5 a,
+.skin-5 a:visited,
+.skin-5 h1,
+.skin-5 h2,
+.skin-5 h3,
+.skin-5 h4,
+.skin-5 h5,
+.skin-5 h6
+{
+    color: #737D26;
+}
+
+.skin-5 a,
+.skin-5 a:visited
+{}
+
+.skin-5 a:hover,
+.skin-5 a:active,
+.skin-5 #header-navigation a:hover
+{
+    color: #3F522B;
+}
+
+
+/* Skin Custom
+----------------------------------------------------------------------------- */
+.skin-custom #page-header,
+.skin-custom #bottom-widgets
+{
+    background: url(../images/backgrounds/skin-5.jpg);
+}
+
+.skin-custom #page-header .navigation-wrapper,
+.skin-custom #page-header .page-frontpage .navigation-wrapper,
+.skin-custom #header-navigation li,
+.skin-custom #page-title,
+.skin-custom #breadcrumbs,
+.skin-custom .ribbon-header,
+.skin-custom .box-head, 
+.skin-custom .page-content .header-404 h3.ribbon-404,
+.skin-custom .toggle-trigger,
+.skin-custom .accordion-trigger,
+.skin-custom #pager li:hover a,
+.skin-custom .pager-current span,
+.skin-custom table th,
+.skin-custom table tfoot,
+.skin-custom .circle-list li,
+.skin-custom .featured-list li,
+.skin-custom .arrow-list li,
+.skin-custom .check-list li,
+.skin-custom .ban-list li,
+.skin-custom .info-list li,
+.skin-custom .btn,
+.skin-custom .btn-s,
+.skin-custom .btn-l,
+.skin-custom .btn-xl,
+.skin-custom input[type=submit],
+.skin-custom input[type=reset],
+.skin-custom input[type=button],
+.skin-custom input.submit,
+.skin-custom input[type=submit]:hover,
+.skin-custom input[type=reset]:hover,
+.skin-custom input.submit:hover,
+.skin-custom button:hover
+{
+    background-color: #cc2c08;
+}
+
+.skin-custom .comment-header .comment-created,
+.skin-custom .widget-contacts-info span,
+.skin-custom .widget-recent-posts time,
+.skin-custom .tweet-time,
+.skin-custom .widget-content li:hover a,
+.skin-custom a,
+.skin-custom a:visited,
+.skin-custom h1,
+.skin-custom h2,
+.skin-custom h3,
+.skin-custom h4,
+.skin-custom h5,
+.skin-custom h6
+{
+    color: #AB391F;
+}
+
+.skin-custom a,
+.skin-custom a:visited
+{}
+
+.skin-custom a:hover,
+.skin-custom a:active,
+.skin-custom #header-navigation a:hover
+{
+    color: #652112;
+}

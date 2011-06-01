@@ -1,0 +1,17 @@
+/* Screen stylesheets */
+
+/* Plugins */
+@import url(../scripts/plugins/prettyphoto/css/prettyPhoto.css) screen;
+@import url(../scripts/plugins/tipsy/tipsy.css) screen;
+@import url(../scripts/plugins/nivo/nivo-slider.css) screen;
+@import url(../scripts/plugins/video-js/video-js.css) screen;
+
+/* Template */
+@import url(960.css) screen;
+@import url(widgets.css) screen;
+@import url(style.css) screen;
+@import url(skin.css) screen;
+
+
+/* Print stylesheet */
+@import url(print.css) print;
