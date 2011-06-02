@@ -35,6 +35,45 @@
 
                     <!-- Code -->
                     <div class="toggle-block">
+                        <div class="toggle-trigger"><a href="#">Usuário</a></div>
+
+                        <div class="toggle-content">
+                            <form method="post" action="ManageUser">
+                                <p>
+                                    <label for="cf_name">E-mail <span class="required">(Obrigatório *)</span></label>
+                                    <input type="text" name="email" id="email" class="required" required />
+                                </p>
+
+                                <p>
+                                    <label for="cf_name">Nome <span class="required">(Obrigatório *)</span></label>
+                                    <input type="text" name="name" id="name" class="required" required />
+                                </p>
+
+                                <p>
+                                    <label for="cf_name">Senha <span class="required">(Obrigatório *)</span></label>
+                                    <input type="password" name="password" id="password" class="required" required />
+                                </p>
+
+                                <p>
+                                    <label for="cf_name">Perfil <span class="required">(Obrigatório *)</span></label>
+                                    <select name="profile" class="required" required>
+                                        <option value="" class="" ></option>
+                                        <option value="ajudante" >Ajudante</option> <!-- busca, insere, altera filmes -->
+                                        <option value="administrador" >Administrador</option> <!-- insere, altera, apaga filmes e usuario -->
+                                    </select>
+                                </p>
+
+                                <p>
+                                    <input type="hidden" name="action" value="register" />
+                                    <input type="submit" value="Cadastrar" />
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /Code -->
+
+                    <!-- Code -->
+                    <div class="toggle-block">
                         <div class="toggle-trigger"><a href="#">Artista</a></div>
                         <div class="toggle-content">
                             <form method="post" action="ManageArtist">

@@ -27,7 +27,8 @@ public class DataBase {
 
     private java.sql.Connection con = null;
     private final String url = "jdbc:sqlserver://";
-    private final String serverName = "shelton.sor.ufscar.br";
+//    private final String serverName = "shelton.sor.ufscar.br";
+    private final String serverName = "192.168.12.4";
     private final String databaseName = "labbd11";
     private final String userName = "labbd11";
     private final String password = "hvi2011";
