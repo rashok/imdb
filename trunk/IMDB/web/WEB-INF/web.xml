@@ -8,6 +8,10 @@
         <servlet-name>ManageArtist</servlet-name>
         <servlet-class>com.imdb.servlet.ManageArtist</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManageUser</servlet-name>
+        <servlet-class>com.imdb.servlet.ManageUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ManageMovie</servlet-name>
         <url-pattern>/ManageMovie</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ManageArtist</servlet-name>
         <url-pattern>/ManageArtist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageUser</servlet-name>
+        <url-pattern>/ManageUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

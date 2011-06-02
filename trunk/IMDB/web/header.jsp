@@ -1,15 +1,28 @@
+<%@page import="com.imdb.beans.User"%>
 <!-- JS notice - We'll show it if js is disabled -->
 <p id="jsnotice">Javascript esta desabilitado, este site necessita seja ativado para funcionar perfeitamente. Por favor <a href="http://enable-javascript.com/"> ative o JavaScript no seu navegador.</a>!</p>
 <!-- /JS notice -->
 
+
 <!-- Header -->
 <header id="page-header">
+
+    <%! User user; %>
+    <% user = (User) session.getAttribute("user"); %>
+    <% if (user == null){ %>
+           <p align="right" ><a href="login.jsp">Login</a></p>
+    <% }else { %>
+    <p align="right" ><a href="index.jsp"><% out.print(user.getName()); %></a></p>
+    <% } %>
+
+
     <!-- Site name + slogan -->
     <hgroup>
         <h1 id="site-name"><a href="index.jsp" title="IMDB">IMDB</a></h1>
         <h2 id="site-slogan">Internet Movie Data Base</h2>
     </hgroup>
     <!-- /Site name + slogan -->
+
 
     <!-- Site navigation wrapper -->
     <div class="navigation-wrapper">
