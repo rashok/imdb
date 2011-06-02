@@ -3,6 +3,8 @@
     Created on : 12/04/2011, 13:39:47
     Author     : Valter
 --%>
+<html>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="head.jsp"%>
 <body class="page-frontpage">

@@ -1,3 +1,10 @@
+<%@page import="java.util.List"%>
+
+<%! List<String> genres, languages; %>
+<% genres = (List<String>) session.getAttribute("genres"); %>
+<% languages = (List<String>) session.getAttribute("languages"); %>
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -8,8 +15,8 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     
-<head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+<head>
 
     <!-- Page title -->
     <title>IMDB</title>
@@ -30,4 +37,6 @@
 
     <!-- Other scripts files located at the bottom of the page -->
     <script src="scripts/modernizr-1.6.min.js"></script>
+    
 </head>
+
