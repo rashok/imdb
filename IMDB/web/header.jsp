@@ -6,7 +6,7 @@
 <header id="page-header">
     <!-- Site name + slogan -->
     <hgroup>
-        <h1 id="site-name"><a href="index-2.html" title="IMDB">IMDB</a></h1>
+        <h1 id="site-name"><a href="index.jsp" title="IMDB">IMDB</a></h1>
         <h2 id="site-slogan">Internet Movie Data Base</h2>
     </hgroup>
     <!-- /Site name + slogan -->
@@ -18,7 +18,11 @@
             <ul>
                 <li>
                     <a href="index.jsp" title="Home">Home</a>
-                    <a href="cadastro.jsp" title="Cadastro">Cadastro</a>
+                    <% if (genres == null || languages == null){ %>
+                           <a href="ManageMovie?action=getInfo" title="Cadastro">Cadastro</a>
+                    <% } else { %>
+                           <a href="cadastro.jsp" title="Cadastro">Cadastro</a>
+                    <% } %>
                     <!--
                     <ul class="subnav">
                         <li><a href="index-2.html" title="Nivo Slider">Nivo Slider</a></li>

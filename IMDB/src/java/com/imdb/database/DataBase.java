@@ -64,31 +64,4 @@ public class DataBase {
         }
     }
 
-    public void getMoviesActor(String actor) {
-
-        try {
-            DataBase dataBase = new DataBase();
-            Connection connection = dataBase.getConnection();
-            Statement statement = connection.createStatement();
-
-            CallableStatement stm = connection.prepareCall("{call getMovieActor(?)}");
-            stm.setString(1, actor);
-
-            ResultSet resultSet = stm.executeQuery();
-
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString("actorname") + "," + resultSet.getString("sex") + "," + resultSet.getString("title"));
-            }
-
-
-        } catch (SQLException sqle) {
-        } catch (Exception exception) {
-        }
-
-    }
-
-    public static void main(String args[]) {
-        DataBase dataBase = new DataBase();
-        dataBase.getMoviesActor("Jhon");
-    }
 }
