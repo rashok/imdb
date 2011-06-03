@@ -1,12 +1,6 @@
-/**
- * @(#)DataBase.java      1.0  13/04/2011
- *
- * Copyright (c) 2011 ByteCode Team, Inc.
- * Sorocaba, São Paulo, Brazil.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information of
- * ByteCode Team, Inc.
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.imdb.database;
 
@@ -14,12 +8,9 @@ import java.sql.Connection;
 
 /**
  *
-Conexão com o banco de dados
- *
- * @version 1.0
  * @author Valter
  */
-public class DataBase {
+public class Administrador {
 
     private java.sql.Connection con = null;
     private final String url = "jdbc:sqlserver://";
@@ -27,9 +18,6 @@ public class DataBase {
     private final String databaseName = "labbd11";
     private final String userName = "labbd11";
     private final String password = "hvi2011";
-
-    public DataBase() {
-    }
 
     private String getConnectionUrl() {
         return url + serverName + ";databaseName=" + databaseName;

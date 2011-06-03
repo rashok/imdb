@@ -1,6 +1,10 @@
+<%@page import="com.imdb.beans.User"%>
 <%@page import="java.util.List"%>
 
+<%! User user; %>
 <%! List<String> genres, languages; %>
+
+<% user = (User) session.getAttribute("user"); %>
 <% genres = (List<String>) session.getAttribute("genres"); %>
 <% languages = (List<String>) session.getAttribute("languages"); %>
 

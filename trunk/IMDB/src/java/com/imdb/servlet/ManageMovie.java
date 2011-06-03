@@ -46,6 +46,10 @@ public class ManageMovie extends HttpServlet {
             forward("cadastro.jsp", request, response);
         } else if (action.equals("search")) {
             search(request, response);
+        } else if (action.equals("getLanguagesGenres")) {
+            getLanguages(request, response);
+            getGenres(request, response);
+            forward("search.jsp", request, response);
         }
     }
 

@@ -7,12 +7,12 @@ package com.imdb.servlet;
 import com.imdb.beans.User;
 import com.imdb.dao.DAOUser;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -36,6 +36,8 @@ public class ManageUser extends HttpServlet {
             register(request, response);
         } else if (action.equals("login")) {
             login(request, response);
+        } else if (action.equals("logoff")){
+            logoff(request, response);
         }
 
     }
@@ -130,6 +132,20 @@ public class ManageUser extends HttpServlet {
 
         request.getSession().setAttribute("user", user);
 
+        forward("index.jsp", request, response);
+
+
+    }
+    
+    private void logoff(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession();
+        
+        session.invalidate();
+        
+//        session.setAttribute("status", "box-success");
+//        session.setAttribute("message", "Volte sempre!");
+        
+        
         forward("index.jsp", request, response);
 
 

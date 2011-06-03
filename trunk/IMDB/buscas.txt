@@ -4,41 +4,196 @@
 -- de um ou mais atores (exato ou expressão regular).
 
 
--- 2. Quais atores trabalharam com apenas gêneros X e/ou Y? Construir um ranking.
 -- 3. Uma consulta definida pelo grupo envolvendo: 
 	--(1) duas ou mais tabelas com condições de seleção e 
 	--(2) funções de agregação com agrupamento e/ou aninhamento de consultas (subconsultas).
 
 
--- busca que inclui o idioma	
-Select top 100 title,m.id from movie as m, genre as g, genre_movie as h
-	where g.genre = 'Comedy' and G.id = h.idGenre and h.idMovie = m.id
-	--obs : g.genre = 'Comedy' vai ser g.genre = 'opcao escolhida pelo usuario'
-	
-	
--- teste para busca que inclui o idioma (OK!!)	
-select genre from genre as g, movie as m, genre_movie as h 
-	where m.id = 197 and m.id = h.idMovie and h.idGenre = g.id
-
-
--- testando procedure
 
 
 
-CREATE PROCEDURE buscaGenerocomAtores(@genero varchar(100),@quantidadeDeAtores int) AS
+--  Procedures
+
+-- 1. Busca avançada de filmes, que inclui o idioma e a especificação 
+-- de um ou mais atores (exato ou expressão regular).
+
+alter Procedure getLinguagemAtor @linguagem varchar(100),
+				 @ator1 varchar(100) = null,
+				 @ator2 varchar(100) = null,
+				 @ator3 varchar(100) = null 
+	AS
 	SET NOCOUNT ON
+	SELECT TOP 100 title
+	 from movie as m,
+	 language as l,
+	 language_movie as lm,
+	 movie_actor as ma,
+	 actor as a
+	 where	
+	 l.language = @linguagem and
+	 l.id = lm.idLanguage and
+	 lm.idMovie = m.id and 
+	 lm.idMovie = ma.idMovie and
+	 ma.idActor = a.id and
+	 a.name = @ator1 or a.name = @ator2 or a.name = @ator3
+	 GROUP BY title;		
+
 	
-	DECLARE @quantidade int;	
-	
-	--SELECT @quantidade = 
-	--SELECT COUNT(idActor) FROM movie_actor;
-	
-	
-	-- BUSCA COM GENEROS OK
-	SELECT TOP 100 m.title,m.id from movie as m, genre as g, genre_movie as h,movie_actor as i
-	WHERE 
-		g.genre = 'COMEDY' AND
-		g.id = h.idGenre AND
-		h.idMovie = M.id AND;
-		--m.id = i.idMovie AND	
 		
+		
+----------------------------
+-- 2. Quais atores trabalharam com apenas gêneros X e/ou Y? Construir um ranking.
+FALTA INCLUIR O ATOR
+alter Procedure getGeneroXeOuY @generoX varchar(100)=null,				 
+				 @generoY varchar(100) = null 
+	AS
+	SET NOCOUNT ON
+	SELECT TOP 100 title
+	 from movie as m,
+	 genre as g,
+	 genre_movie as gm	 	 
+	 where	
+	 g.genre = @generoX or
+	 g.genre = @generoY
+	 and g.id = gm.idGenre and
+	 gm.idMovie = m.id
+	 GROUP BY title;								
+
+
+teste dessa consulta : com a seguinte consulta :
+SELECT TOP 100 title
+	 from movie as m,
+	 genre as g,
+	 genre_movie as gm
+	 where	
+	 g.genre = 'Comedy' or
+	 g.genre = 'Drama'and 
+	 g.id = gm.idGenre and
+	 gm.idMovie = m.id
+	 GROUP BY title;
+Tempo de execução : 6 minutos e 38 segundos (DEMOROOU MUITO TEMPO!)
+REsultados obtidos : 
+
+-- And Now the Screaming Starts! (1973)
+!Women Art Revolution (2010)
+"#1 Single" (2006)
+"#1 Single" (2006) {Cats and Dogs (#1.4)}
+"#1 Single" (2006) {Finishing a Chapter (#1.5)}
+"#1 Single" (2006) {Is the Grass Greener? (#1.1)}
+"#1 Single" (2006) {Stay (#1.8)}
+"#1 Single" (2006) {The Rules of Dating (#1.3)}
+"#1 Single" (2006) {Timing Is Everything (#1.7)}
+"#1 Single" (2006) {Window Shopping (#1.2)}
+"#1 Single" (2006) {Wingman (#1.6)}
+"$#*! My Dad Says" (2010)
+"$#*! My Dad Says" (2010) {Code Ed (#1.4)}
+"$#*! My Dad Says" (2010) {Corn Star (#1.14)}
+"$#*! My Dad Says" (2010) {Dog Ed Pursuit (#1.7)}
+"$#*! My Dad Says" (2010) {Easy, Writer (#1.6)}
+"$#*! My Dad Says" (2010) {Ed Goes to Court (#1.15)}
+"$#*! My Dad Says" (2010) {Family Dinner for Schmucks (#1.11)}
+"$#*! My Dad Says" (2010) {Goodson Goes Deep (#1.12)}
+"$#*! My Dad Says" (2010) {Lock and Load (#1.17)}
+"$#*! My Dad Says" (2010) {Make a Wish (#1.9)}
+"$#*! My Dad Says" (2010) {Not Without My Jacket (#1.5)}
+"$#*! My Dad Says" (2010) {Pilot (#1.1)}
+"$#*! My Dad Says" (2010) {The Better Father (#1.13)}
+"$#*! My Dad Says" (2010) {The Manly Thing to Do (#1.8)}
+"$#*! My Dad Says" (2010) {The Truth About Dads & Moms (#1.3)}
+"$#*! My Dad Says" (2010) {Well Suitored (#1.16)}
+"$#*! My Dad Says" (2010) {Who's Your Daddy? (#1.18)}
+"$#*! My Dad Says" (2010) {Wi-Fight (#1.2)}
+"$#*! My Dad Says" (2010) {You Can't Handle the Truce (#1.10)}
+"$1,000,000 Chance of a Lifetime" (1986)
+"$100 Taxi Ride" (2001)
+"$100,000 Fortune Hunt" (1989)
+"$100,000 Name That Tune" (1984)
+"$2 Bill" (2002)
+"$2 Bill" (2002) {(#3.1)}
+"$2 Bill" (2002) {Beastie Boys (#3.2)}
+"$2 Bill" (2002) {Daddy Yankee}
+"$2 Bill" (2002) {DMX, Method Man and Ludacris (#2.3)}
+"$2 Bill" (2002) {Fat Joe, Juvenile & T.I.}
+"$2 Bill" (2002) {Kanye West}
+"$2 Bill" (2002) {Lil Jon & The Eastside Boyz (#3.4)}
+"$2 Bill" (2002) {Missy Elliott (#2.4)}
+"$2 Bill" (2002) {My Chemical Romance}
+"$2 Bill" (2002) {Secret Machines and The Killers (#3.3)}
+"$2 Bill" (2002) {System of a Down}
+"$2 Bill" (2002) {The Game}
+"$2 Bill" (2002) {The Strokes (#1.1)}
+"$2 Bill" (2002) {The Used & My Chemical Romance (#3.5)}
+"$2 Bill" (2002) {Yellowcard}
+"$25 Million Dollar Hoax" (2004)
+"$25 Million Dollar Hoax" (2004) {(#1.1)}
+"$25 Million Dollar Hoax" (2004) {(#1.2)}
+"$25 Million Dollar Hoax" (2004) {(#1.3)}
+"$40 a Day" (2002)
+"$40 a Day" (2002) {Adirondacks (#2.24)}
+"$40 a Day" (2002) {Amsterdam (#1.16)}
+"$40 a Day" (2002) {Antigua (#3.24)}
+"$40 a Day" (2002) {Asheville, NC (#3.9)}
+"$40 a Day" (2002) {Ashland, OR (#3.18)}
+"$40 a Day" (2002) {Aspen (#2.21)}
+"$40 a Day" (2002) {Atlanta, GA (#1.22)}
+"$40 a Day" (2002) {Austin, TX (#2.10)}
+"$40 a Day" (2002) {Bermuda (#3.5)}
+"$40 a Day" (2002) {Big Island: Hawaii (#2.5)}
+"$40 a Day" (2002) {Boston (#2.6)}
+"$40 a Day" (2002) {Brussles, Belgium (#1.26)}
+"$40 a Day" (2002) {Cape Cod (#2.4)}
+"$40 a Day" (2002) {Charleston, SC (#1.21)}
+"$40 a Day" (2002) {Chattanooga, Tennessee (#3.7)}
+"$40 a Day" (2002) {Chicago, IL (#2.18)}
+"$40 a Day" (2002) {Cleveland (#2.25)}
+"$40 a Day" (2002) {Cooperstown (#1.17)}
+"$40 a Day" (2002) {Coos Bay (#3.20)}
+"$40 a Day" (2002) {Corpus Christi (#2.7)}
+"$40 a Day" (2002) {Dallas, Texas (#2.3)}
+"$40 a Day" (2002) {Denver (#2.20)}
+"$40 a Day" (2002) {Durham and Chapel Hill, North Carolina (#3.3)}
+"$40 a Day" (2002) {Florence, Italy (#1.18)}
+"$40 a Day" (2002) {Ft. Lauderdale, FL (#3.22)}
+"$40 a Day" (2002) {Grand Canyon, Arizona (#3.2)}
+"$40 a Day" (2002) {Hamptons, NY (#3.19)}
+"$40 a Day" (2002) {Hilton Head, South Carolina (#3.8)}
+"$40 a Day" (2002) {Jackson Hole, WY (#3.16)}
+"$40 a Day" (2002) {Laguna Beach, CA (#2.13)}
+"$40 a Day" (2002) {Las Vegas, Nevada (#3.4)}
+"$40 a Day" (2002) {Las Vegas, NV (#1.12)}
+"$40 a Day" (2002) {Los Angeles (#1.3)}
+"$40 a Day" (2002) {Martha's Vineyard (#3.12)}
+"$40 a Day" (2002) {Maui, Hawaii (#2.9)}
+"$40 a Day" (2002) {Memphis, TN (#2.8)}
+"$40 a Day" (2002) {Miami, Florida (#1.8)}
+"$40 a Day" (2002) {Milwaukee, WI (#2.16)}
+"$40 a Day" (2002) {Monterey (#1.9)}
+"$40 a Day" (2002) {Montreal (#2.19)}
+"$40 a Day" (2002) {Mount Rushmore, SD (#3.17)}
+"$40 a Day" (2002) {Mystic, CT (#3.13)}
+"$40 a Day" (2002) {Nantucket (#3.14)}
+"$40 a Day" (2002) {Napa (#1.1)}
+"$40 a Day" (2002) {Nashville (#2.12)}
+
+
+
+	 
+									
+		
+		
+		
+
+3 -  -- Busca de filmes do gênero drama com no mínimo 2 atores 
+ -- e cada ator só pode ter um personagem no filme
+select m.title
+	from
+		movie as m,
+		genre as g, 
+		genre_movie as gm,
+		movie_actor as ma
+	where
+		g.genre = 'Drama' and
+		g.id = gm.idGenre AND
+		gm.idMovie = m.id and
+		m.id = ma.idMovie 		
+		group by title having COUNT(ma.idActor) > 1 and COUNT		
