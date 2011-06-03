@@ -1,0 +1,39 @@
+--perfis:
+--usuario, só realiza busca  (as avançadas)
+--ajudante, cadastra filmes, altera filmes e realiza buscas
+--administrador, cadatra, alterar, apaga, filmes e ajudantes
+
+
+
+CREATE LOGIN ADMIN WITH PASSWORD = 'adminadmin';
+
+CREATE USER ADMINISTRADOR FROM LOGIN ADMIN;
+
+
+-- DB_DATAREADER : db_datareader fixed database role can run a SELECT statement against any table or view in the database.
+-- DB_DATAWRITER : Members of the db_datawriter fixed database role can add, delete, or change data in all user tables. 
+
+EXEC SP_ADDROLEMEMBER 'DB_DATAREADER', 'ADMIN'
+
+EXEC SP_ADDROLEMEMBER 'DB_DATAWRITER', 'ADMIN'
+
+
+-----------------------------------------------------------------------
+
+CREATE LOGIN AJUD WITH PASSWORD = 'ajudanteajudante';
+
+CREATE USER AJUDANTE FROM LOGIN AJUD;
+
+EXEC SP_ADDROLEMEMBER 'DB_DATAREADER', 'AJUD'
+-- O DATA WRITER PARA AJUDANTE, DÁ PERMISSOES A MAIS DO QUE DEVERIA
+EXEC SP_ADDROLEMEMBER 'DB_DATAWRITER', 'AJUD'
+
+------------------------------------------------------------------------
+
+CREATE LOGIN US WITH PASSWORD = 'usuariousuario';
+
+CREATE USER USUARIO FROM LOGIN US;
+
+EXEC SP_ADDROLEMEMBER 'DB_DATAREADER', 'USUARIO'
+
+

@@ -7,12 +7,11 @@
 <!-- Header -->
 <header id="page-header">
 
-    <%! User user; %>
-    <% user = (User) session.getAttribute("user"); %>
+
     <% if (user == null){ %>
            <p align="right" ><a href="login.jsp">Login</a></p>
     <% }else { %>
-    <p align="right" ><a href="index.jsp"><% out.print(user.getName()); %></a></p>
+    <p align="right" ><a href="index.jsp"><% out.print(user.getName()); %></a>  <a href="ManageUser?action=logoff">logout</a>  </p>
     <% } %>
 
 
@@ -31,10 +30,16 @@
             <ul>
                 <li>
                     <a href="index.jsp" title="Home">Home</a>
+                    <% if (languages == null){ %>
+                           <a href="ManageMovie?action=getLanguagesGenres" title="Pesquise seus atores, diretores e filmes">Pesquisar</a>
+                    <% }else { %>
+                           <a href="search.jsp" title="Pesquise seus atores, diretores e filmes">Pesquisar</a>
+                    <% } %>
+                    
                     <% if (genres == null || languages == null){ %>
                            <a href="ManageMovie?action=getInfo" title="Cadastro">Cadastro</a>
                     <% } else { %>
-                           <a href="cadastro.jsp" title="Cadastro">Cadastro</a>
+                           <a href="cadastro.jsp" title="Faça seu cadastro, ou do seu ator, diretor ou filme">Cadastro</a>
                     <% } %>
                     <!--
                     <ul class="subnav">
